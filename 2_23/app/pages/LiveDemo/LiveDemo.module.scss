@@ -1,0 +1,95 @@
+@import '../../../styles/main.scss';
+
+.pageContainer {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.mainContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  
+  h1 {
+    color: #4A5568;
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: 600;
+  }
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: #E2E8F0;
+  border-radius: 4px;
+  margin: 2rem 0 4rem;
+
+  .progress {
+    width: 33.33%; // First step of three
+    height: 100%;
+    background-color: #074361;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  
+  .card {
+    background: #F8FAFC;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    width: 340px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .cardImage {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #4A5568;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    p {
+      color: #64748B;
+      margin-bottom: 2.5rem;
+      font-size: 0.938rem;
+      line-height: 1.5;
+    }
+
+    .chooseButton {
+      background-color: rgba(7, 67, 97, 0.80);
+      color: white;
+      border: none;
+      padding: 0.875rem 3rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 0.938rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: rgba(7, 67, 97, 0.90);
+      }
+    }
+  }
+}

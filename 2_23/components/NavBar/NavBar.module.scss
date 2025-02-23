@@ -1,0 +1,183 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem 1.25rem;
+  background-color: white;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.leftSection {
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    
+    .logo {
+      height: 42px;
+      width: auto;
+    }
+    
+    .logoText {
+      font-weight: var(--font-medium);
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      letter-spacing: 0.2px;
+    }
+  }
+}
+
+.centerSection {
+  display: flex;
+  gap: 2.5rem;
+
+  .navButton {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    background: transparent;
+    font-size: 0.938rem;
+    color: #4A5568;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    border-radius: 12px;
+    font-weight: var(--font-medium);
+
+    &:hover {
+      background-color: #F8FAFC;
+      color: #4A5568;
+    }
+
+    &.active {
+      background-color: #F8FAFC;
+      color: #4A5568;
+      
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.courseSelector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #F8FAFC;
+  padding: 0.625rem 1.25rem;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: #F1F5F9;
+    transform: translateY(-1px);
+  }
+
+  .courseInfo {
+    text-align: left;
+    margin-right: 0.5rem;
+    
+    .courseName {
+      display: block;
+      font-weight: 500;
+      color: #1E293B;
+      font-size: 0.875rem;
+      margin-bottom: 2px;
+    }
+    
+    .courseCode {
+      display: block;
+      font-size: 0.75rem;
+      color: #94A3B8;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  .dropdownArrow {
+    width: 8px;
+    height: 8px;
+    border: solid #94A3B8;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    margin-top: -2px;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover .dropdownArrow {
+    transform: rotate(45deg) translateY(1px);
+  }
+}
+
+.profileSection {
+  position: relative;
+  
+  .profilePic {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.classDropdown, .profileDropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.classDropdown {
+  .dropdownItem {
+    padding: 0.75rem 1rem;
+    
+    &:hover {
+      background-color: #F8FAFC;
+    }
+    
+    .courseName {
+      display: block;
+      font-weight: var(--font-medium);
+      color: var(--text-primary);
+      font-size: 0.875rem;
+    }
+    
+    .courseCode {
+      display: block;
+      font-size: 0.75rem;
+      color: #94A3B8;
+    }
+  }
+}
+
+.profileDropdown {
+  .dropdownItem {
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #F8FAFC;
+    }
+  }
+}
